@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>3ce72106-8f2a-4e1f-bddf-80e1bed8ff52</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JC.Samples.AsyncRepository.Entities\JC.Samples.AsyncRepository.Entities.csproj" />
+    <ProjectReference Include="..\JC.Samples.AsyncRepository.Repository\JC.Samples.AsyncRepository.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

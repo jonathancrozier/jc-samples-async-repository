@@ -1,0 +1,26 @@
+﻿@page
+@model TodosModel
+@{
+    ViewData["Title"] = "Todos";
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Completed</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Todos?.Any() == true)
+        {
+            @foreach (var todo in Model.Todos)
+            {
+                <tr>
+                    <td>@todo.Title</td>
+                    <td>@todo.Completed</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
