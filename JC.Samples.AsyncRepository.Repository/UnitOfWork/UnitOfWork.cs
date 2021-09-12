@@ -36,7 +36,7 @@ namespace JC.Samples.AsyncRepository.Repository
         #region Methods
 
         /// <summary>
-        /// Completes the unit of work, saving all repository changes underlying data-store.
+        /// Completes the unit of work, saving all repository changes to the underlying data-store.
         /// </summary>
         /// <returns>The number of state entries written to the underlying data-store</returns>
         public async Task CompleteAsync() => await _dbContext.SaveChangesAsync();
