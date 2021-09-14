@@ -38,7 +38,7 @@ namespace JC.Samples.AsyncRepository.Repository
         /// <summary>
         /// Completes the unit of work, saving all repository changes to the underlying data-store.
         /// </summary>
-        /// <returns>The number of state entries written to the underlying data-store</returns>
+        /// <returns><see cref="Task"/></returns>
         public async Task CompleteAsync() => await _dbContext.SaveChangesAsync();
 
         #endregion
@@ -54,6 +54,7 @@ namespace JC.Samples.AsyncRepository.Repository
         /// <summary>
         /// Cleans up any resources being used.
         /// </summary>
+        /// <returns><see cref="ValueTask"/></returns>
         public async ValueTask DisposeAsync()
         {
             await DisposeAsync(true);
