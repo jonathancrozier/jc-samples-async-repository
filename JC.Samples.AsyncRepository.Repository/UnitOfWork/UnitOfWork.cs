@@ -64,11 +64,20 @@ namespace JC.Samples.AsyncRepository.Repository
             GC.SuppressFinalize(this);
         }
 
+        /// <summary>
+        /// Cleans up any resources being used.
+        /// </summary>
+        /// <param name="disposing">Whether or not we are disposing</param>
+        /// <returns><see cref="ValueTask"/></returns>
         protected virtual async ValueTask DisposeAsync(bool disposing)
         {
             if (!_disposed)
             {
-                if (disposing) await _dbContext.DisposeAsync(); // Dispose managed resources.
+                if (disposing)
+                {
+                    // Dispose managed resources.
+                    await _dbContext.DisposeAsync();
+                }
 
                 // Dispose any unmanaged resources here...
 
